@@ -1,4 +1,4 @@
-package clientTest;
+package test;
 
 public class Constants {
 	public static final int[][] boardEmpty = { { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 },

@@ -1,4 +1,4 @@
-package serverTest;
+package test;
 
 import java.net.Socket;
 
@@ -9,11 +9,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import core.Player;
-import network.Connect4Server;
 
 class PlayerTest {
 
-	static Connect4Server server;
+	static Connect4ServerRunner serverRunner;
 	Player player1;
 	Player player2;
 	Player computer;
@@ -22,27 +21,29 @@ class PlayerTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		server = new Connect4Server();
+		serverRunner = new Connect4ServerRunner();
+		new Thread(serverRunner).start();
 	}
 
 	@AfterAll
 	static void tearDownAfterClass() throws Exception {
-		server = null;
+		serverRunner = null;
 	}
 
 	@BeforeEach
 	void setUp() throws Exception {
-		Socket socket1 = new Socket("localhost", Connect4Server.PORT);
+		Socket socket1 = new Socket("localhost", 8000);
+		Socket socket2 = new Socket("localhost", 8000);
 		player1 = new Player(socket1);
-		player2 = new Player(socket1);
+		player2 = new Player(socket2);
 		player2.setPlayer2();
 		computer = new Player();
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
-		socket1.close();
-		socket2.close();
+		socket1 = null;
+		socket2 = null;
 		player1 = null;
 		player2 = null;
 		computer = null;
@@ -90,15 +91,15 @@ class PlayerTest {
 	}
 
 	@Test
-	void testGetIn() {
-	}
-
-	@Test
-	void testGetOut() {
+	void getIconX() {
+		assert (player1.getIcon().equals("X"));
+		assert (player2.getIcon().equals("O"));
 	}
 
 	@Test
 	void testClose() {
+		player1.close();
+		player2.close();
 	}
 
 }

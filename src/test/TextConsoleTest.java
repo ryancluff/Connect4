@@ -1,4 +1,4 @@
-package clientTest;
+package test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

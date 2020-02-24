@@ -1,14 +1,14 @@
-package serverTest;
+package test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.fail;
 
+import org.junit.Test;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
-class Connect4Server {
+class Connect4ClientTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -27,13 +27,12 @@ class Connect4Server {
 	}
 
 	@Test
-	void testMain() {
+	void testConnect4Client() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testConnect4Server() {
+	void testPlayTurn() {
 		fail("Not yet implemented");
 	}
-
 }

@@ -51,13 +51,15 @@ public class GameThread implements Runnable {
 	 */
 	@Override
 	public void run() {
-		InputListener inListener1 = new InputListener(player1);
-		new Thread(inListener1).start();
+		if (!player1.isComputer()) {
+			InputListener inListener1 = new InputListener(player1);
+			new Thread(inListener1).start();
+		}
+
 		if (!player2.isComputer()) {
 			InputListener inListener2 = new InputListener(player2);
 			new Thread(inListener2).start();
 		}
-
 	}
 
 	/**
@@ -75,7 +77,6 @@ public class GameThread implements Runnable {
 			try {
 				player.getOut().writeObject(new GameState(status, gameOver, board, turn));
 			} catch (IOException e) {
-
 				e.printStackTrace();
 			}
 		}
@@ -84,7 +85,7 @@ public class GameThread implements Runnable {
 	/**
 	 * Closes the connections for both players
 	 */
-	private void close() {
+	public void close() {
 		player1.close();
 		player2.close();
 	}

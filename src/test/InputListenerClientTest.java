@@ -1,4 +1,4 @@
-package serverTest;
+package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class GameThreadTest {
+class InputListenerClientTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -27,17 +27,12 @@ class GameThreadTest {
 	}
 
 	@Test
-	void testGameThread() {
+	void testInputListener() {
 		fail("Not yet implemented");
 	}
 
 	@Test
 	void testRun() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testUpdateClient() {
 		fail("Not yet implemented");
 	}
 

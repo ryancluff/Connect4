@@ -29,15 +29,6 @@ public class Connect4Server extends JFrame {
 	 */
 	public static final int PORT = 8000;
 
-	/**
-	 * indicates whether there is a player waiting for a second player to start a
-	 * two player game
-	 */
-
-	/**
-	 * A reference to the waiting player
-	 */
-
 	private JTextArea textArea = new JTextArea();
 
 	/**
@@ -46,7 +37,7 @@ public class Connect4Server extends JFrame {
 	 * @param args none
 	 */
 	public static void main(String[] args) {
-		new Connect4Server();
+		new Connect4Server().run();
 	}
 
 	/**
@@ -54,7 +45,7 @@ public class Connect4Server extends JFrame {
 	 * a one or two player game depending on an initial boolean value sent by the
 	 * client.
 	 */
-	public Connect4Server() {
+	public void run() {
 		boolean playerIsWaiting = false;
 		Player waitingPlayer = null;
 		int clientWaitingNo = -1;

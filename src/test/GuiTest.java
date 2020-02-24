@@ -1,4 +1,4 @@
-package clientTest;
+package test;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class Connect4ClientTest {
+class GuiTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -27,12 +27,43 @@ class Connect4ClientTest {
 	}
 
 	@Test
-	void testConnect4Client() {
+	void testStartStage() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testPlayTurn() {
+	void testGetComputer() {
 		fail("Not yet implemented");
 	}
+
+	@Test
+	void testDisplayStatus() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testDisplayBoard() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testSetGameOver() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testSetTurn() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetCol() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testMain() {
+		fail("Not yet implemented");
+	}
+
 }

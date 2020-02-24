@@ -1,10 +1,9 @@
-package serverTest;
+package test;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import clientTest.Constants;
 import network.GameState;
 
 class GameStateTest {
@@ -15,7 +14,7 @@ class GameStateTest {
 	GameState state4;
 
 	@BeforeEach
-	void setUp() throws Exception {
+	public void setUp() throws Exception {
 		state1 = new GameState("Status", false, Constants.boardEmpty, false);
 		state2 = new GameState("Turn: Player O", true, Constants.board2, true);
 		state3 = new GameState("Turn: Player X", true, Constants.board3, false);

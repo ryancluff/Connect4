@@ -1,4 +1,4 @@
-package clientTest;
+package test;
 
 import core.Player;
 import network.GameThread;
